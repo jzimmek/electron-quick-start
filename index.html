@@ -3,13 +3,42 @@
   <head>
     <meta charset="UTF-8">
     <title>Hello World!</title>
+    <style>
+      body {
+        margin: 0;
+      }
+      .root {
+        display: flex;
+      }
+      .sidebar {
+        width: 300px;
+        min-width: 300px;
+        max-width: 300px;
+        background: #ff0000;
+        height: 100vh;
+      }
+      .webviewWrapper {
+        width: 500px;
+        min-width: 500px;
+        max-width: 500px;
+        height: 100vh;
+      }
+      .webview {
+        width: 1500px;
+        min-width: 1500px;
+        max-width: 1500px;
+        height: 100vh;
+      }
+    </style>
   </head>
   <body>
-    <h1>Hello World!</h1>
-    <!-- All of the Node.js APIs are available in this renderer process. -->
-    We are using Node.js <script>document.write(process.versions.node)</script>,
-    Chromium <script>document.write(process.versions.chrome)</script>,
-    and Electron <script>document.write(process.versions.electron)</script>.
+    <div class="root">
+      <div class="sidebar">
+      </div>
+      <div class="webviewWrapper">
+        <webview src="https://www.github.com/" class="webview"/>
+      </div>
+    </div>
   </body>
 
   <script>
